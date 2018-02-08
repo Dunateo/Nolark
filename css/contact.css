@@ -1,0 +1,97 @@
+/* 
+    Document   : contact
+    Created on : 30 sept. 2013, 10:48:43
+    Author     : JG
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+h1 {
+    margin: 0 auto 0 auto;
+    color: black;
+    clear: both;
+}
+
+#geoloc {
+    margin: 0 auto 0 auto;
+    width: 950px;
+}
+
+#geoloc img {
+    float: left;
+    margin: 10px;
+}
+
+#streetview {
+    width: 930px;
+    display: block;
+    margin: 0 auto;
+}
+
+#formulaire {
+    text-align: left;
+}
+
+#formulaire form {
+    clear: both;
+    margin: 0 5% auto 5%;
+}
+
+#formulaire form fieldset {
+    float: left;
+}
+
+#coordo {
+    text-align: right;
+    margin-right: 50px;
+}
+
+#coordo legend {
+    text-align: left;
+}
+
+#marques {
+    text-align: left;
+}
+
+#marques label {
+    margin-right: 40px;
+    text-transform : capitalize;
+}
+
+#marques input {
+    margin-right: 10px;
+}
+
+#controles {
+    float: none;
+}
+
+#tabContact {
+    width:100%;
+    border:0;
+}
+
+.input-validation {
+	display: inline;
+}
+
+input[type="email"]:valid ~ .input-validation::before, input[type="url"]:valid ~ .input-validation::before, input[type="text"]:valid ~ .input-validation::before {
+	content: "✔";
+	color: green;
+}
+
+input[type="email"]:invalid, input[type="url"]:invalid, input[type="text"]:invalid {
+	color: red;
+}
+
+/* Smartphone et Tablette*/
+@media screen and (max-width:992px) {
+    #geoloc {width: 100%;}
+    #geoloc img { height:auto; width:100%; clear:left; margin: 0; margin-bottom: 10px;}
+    #formulaire {width: 100%;}
+    #formulaire form fieldset, #controles {clear: left;}
+	#marques table {white-space: nowrap;}
+}
+
+

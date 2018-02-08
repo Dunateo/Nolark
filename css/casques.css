@@ -1,0 +1,145 @@
+
+#casques {
+    display: block;
+}
+
+#casques article {
+    float: left;
+    width: 157px;
+    height: 275px;
+    margin: 10px;
+    padding: 5px;
+    border: white thin solid;
+}
+
+#casques article:hover {
+    border: #bbb thin solid;
+}
+
+#casques p {
+    margin: 0;
+}
+
+#casques .prix {
+    font-weight: bold;
+    color: red;
+}
+
+#casques .marque {
+    text-transform : uppercase;
+    text-align: left;
+    color: black;
+    font-family: 'Fuse';
+    font-size: xx-large;
+}
+
+#casques .modele {
+    text-transform : capitalize;
+    color: black;
+}
+
+#casques .stockok {
+    float: right;
+    text-transform : uppercase;
+    padding: 2px;
+    top: 10px;
+    right: 10px;
+    background-color: chartreuse;
+}
+
+#casques .stockko {
+    float: right;
+    text-transform : uppercase;
+    padding: 2px;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+}
+
+[data-tip] {
+    position: relative;
+    cursor: help;
+}
+[data-tip]:hover:after {
+    text-transform : none;
+    content: attr(data-tip); /* valeur de l'attribut data-tip */
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    white-space: nowrap; /* pas de retour à la ligne dans l'infobulle' */
+    padding: 5px 10px;
+    background: fuchsia;
+    color: #fff;
+}
+
+#casques .classement {
+    margin: 10px auto 0 36px;
+    background: scroll transparent url(images/etoiles.gif) no-repeat;
+    width: 164px;
+    height: 18px;
+}
+
+#casques .classement.classement05 {
+    background-position: 0 -18px;
+}
+
+#casques .classement.classement10 {
+    background-position: 0 -36px;
+}
+
+#casques .classement.classement15 {
+    background-position: 0 -54px;
+}
+
+#casques .classement.classement20 {
+    background-position: 0 -72px;
+}
+
+#casques .classement.classement25 {
+    background-position: 0 -90px;
+}
+
+#casques .classement.classement30 {
+    background-position: 0 -108px;
+}
+
+#casques .classement.classement35 {
+    background-position: 0 -126px;
+}
+
+#casques .classement.classement40 {
+    background-position: 0 -144px;
+}
+
+#casques .classement.classement45 {
+    background-position: 0 -162px;
+}
+
+#casques .classement.classement50 {
+    background-position: 0 -180px;
+}
+
+/* Smartphone et Tablette */
+@media screen and (max-width:992px) {
+    #casques { width: 100% !important;}
+	#casques article {float: none; margin: 0 auto;}
+}
+
+@media print {
+    body, #casques article p.marque { font-size: 15pt; font-family: serif; }
+	header, nav, footer, #video, #casques article  div.classement { display: none; }
+	#casques article { width: 100%; height: 140px; margin: 0; page-break-inside: avoid; }
+	#casques article img { float: left; }
+	#casques article p.prix,
+	#casques article p.marque,
+	#casques article p.modele,
+	#casques article p.stockok,
+	#casques article p.stockko { float: left; padding: 58.5px 10px; }
+	#casques article p.stockok,
+	#casques article p.stockko {background-color: transparent; width: 200px; }
+	#casques article p.modele { width: 330px;}
+	/* Affichages spécifiques du stock */
+	#casques article p.stockok abbr:after,
+	#casques article p.stockko abbr:after { text-transform: none; content: " : " attr(data-tip); }
+	#casques article p.stockko abbr:before { text-transform: none; content: "/!\\ "; }
+}
