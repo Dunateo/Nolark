@@ -16,10 +16,20 @@ function getAlcoolPur(nbVerres) {
  return uniteAlcool * nbVerres;
 }
 
+/**
+* Fonction qui retourne le coefficient de diffusion en fonction du sexe
+*
+* @param {string} sexe
+* @returns {float}
+*/
 function getCoefDiffusion(sexe) {
+ const coefDiffuH = 0.7, coefDiffuF = 0.6;
  if (sexe === 'homme') {
- return 0.7;
+ return coefDiffuH;
  } else {
- return 0.6;
+ return coefDiffuF;
  }
+}
+function getAlcoolemie(sexe, poids, nbVerres) {
+ return getAlcoolPur(nbVerres) / poids * getCoefDiffusion(sexe);
 }
