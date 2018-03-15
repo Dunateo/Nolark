@@ -12,12 +12,13 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="route.html">Route</a></li>
-                    <li><a href="cross.html">Cross</a></li>
-                    <li><a href="piste.html">Piste</a></li>
-                    <li><a href="enfants.html">Enfants</a></li>
-                    <li><a href="nous-contacter.html">Nous contacter</a></li>
+                    <li><a id="rose2" href="../index.html">Accueil</a></li>
+                    <li><a id="mauve"href="route.html">Route</a></li>
+                    <li><a id="vert2" href="cross.html">Cross</a></li>
+                    <li><a id="violine" href="piste.html">Piste</a></li>
+                    <li><a id="bleu" href="enfants.html">Enfants</a></li>
+                    <li><a id="vert1" href="team.html">La Team</a></li>
+                    <li><a id="rose" href="nous-contacter.html">Nous contacter</a></li>
                 </ul>
             </nav>
         </header>
@@ -29,8 +30,9 @@
                     <legend>Vos résultats : </legend>
                     <p><label for="num_ancien">Nombre d'années d'ancienneté :</label> <input type="number" name="num_ancien" id="num_ancien" min="0" max="50" value="0" /></p>
                     <p><label for="num_D">Distance :</label> <input type="number" name="num_D" id="num_D" min="0" max="9999" value="0" /></p>
-                    <p><label for="num_acc">Nombre d'accidents :</label> <input type="number" name="num_acc" id="num_acc" min="0" max="9999" value="0" /></p>
+                    <p><label for="num_acc">Nombre d'accidents :</label> <input type="range" name="num_acc" id="num_acc" min="0" max="9" value="0" /><output for="num_acc" id="o_num_acc">0</output></p>
                     <h2 id="remuneration"></h2>
+                    <div id="image"></div>
                 </fieldset>
                 <p id="controles"><input type="button" name="sub_calculer" id="btn_calculer" value="Calculer votre rémunération" /> <input type="reset" name="rst_annuler" id="btn_annuler" value="Effacer les données" /></p>
             </form>
