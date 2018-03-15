@@ -30,6 +30,21 @@ function getCoefDiffusion(sexe) {
  return coefDiffuF;
  }
 }
+/**
+* Fonction qui retourne l'alcoolémie en fonction du sexe, du poids et du
+* nombre de verres ingérés
+*
+* @param {string} sexe
+* @param {int} poids
+* @param {int} nbVerres
+* @returns {float}
+*/
 function getAlcoolemie(sexe, poids, nbVerres) {
- return getAlcoolPur(nbVerres) / poids * getCoefDiffusion(sexe);
+ //!\ division par 0, on ne veut pas provoquer la destruction de l'univers ;o)
+ if (poids > 0) {
+ return (getAlcoolPur(nbVerres) / (poids * getCoefDiffusion(sexe))).toFixed(2);
+ } else {
+ return 0;
+ }
 }
+
