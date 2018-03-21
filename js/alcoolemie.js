@@ -62,10 +62,34 @@ function getAmende(alcoolemie) {
  return '4500 €';
  }
 }
+/**
+* Fonction qui retourne la santion encourue en fonction de l'alcoolémie
+*
+* @param {float} alcoolemie
+* @returns {string}
+*/
 function getSanction(alcoolemie) {
- if (alcoolemie < 0.8) {
+ const seuil = 0.8;
+ if (alcoolemie < seuil) {
  return '6 points + suspension 3 ans';
  } else {
- return '6 points + 2 ans de prison + suspension 3 ans + stage de sensibilisation';
+ return '6 points + 2 ans de prison +suspension 3 ans + stage de sensibilisation';
+ }
+}
+/**
+* Fonction qui retourne une valeur entière récupérée via
+* window.document.querySelector(id)
+*
+* @param {string} id
+* @returns {integer}
+*/
+function getInt(id) {
+ let valeur = parseInt(window.document.querySelector(id).value);
+ if (isNaN(valeur)) {
+ window.document.querySelector(id).value = 0;
+ return 0;
+ }
+ else {
+ return valeur;
  }
 }
