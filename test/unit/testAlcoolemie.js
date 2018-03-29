@@ -42,10 +42,11 @@ MesTestsUnitaires.prototype.testsGetString = function () {
  <input type="radio" name="rd_sexe" id="rd_sexefemme" value="femme">
  </fieldset>
  */
- assertTrue('Test bouton radio Homme', 'homme' === getString('#sexeinput[type="radio"]:checked'));
+ assertTrue('Test bouton radio Homme', 'homme' === getString('#sexe input[type="radio"]:checked'));
  // Changement de sexe
  window.document.querySelector('#rd_sexehomme').removeAttribute('checked');
  window.document.querySelector('#rd_sexefemme').setAttribute('checked','checked');
- assertTrue('Test bouton radio Femme', 'femme' === getString('#sexeinput[type="radio"]:checked'));
+ assertTrue('Test bouton radio Femme', 'femme' === getString('#sexe input[type="radio"]:checked'));
+ 
 };
 
