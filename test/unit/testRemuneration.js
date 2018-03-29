@@ -48,3 +48,20 @@ MesTestsUnitaires.prototype.testsRecupValeur = function () {
    
     assertTrue('Test recup anc', 50 === recupValeur("#num_ancien"));
 };
+MesTestsUnitaires.prototype.testsMain = function () {
+    /*:DOC +=
+
+     <form id="form_simulateur" name="form_simulateur">
+                <fieldset id="resultats">
+                    <legend>Vos résultats : </legend>
+                    <p><label for="num_ancien">Nombre d'années d'ancienneté :</label> <input type="number" name="num_ancien" id="num_ancien" min="0" max="50" value="3" /></p>
+                    <p><label for="num_s20">Nombre de S 20 vendus :</label> <input type="number" name="num_s20" id="num_s20" min="0" max="9999" value="3" /></p>
+                    <p><label for="num_xspirit">Nombre de X-Spirit vendus :</label> <input type="number" name="num_xspirit" id="num_xspirit" min="0" max="9999" value="3" /></p>
+                    <p><label for="num_multi">Nombre de Multitec vendus :</label> <input type="number" name="num_multi" id="num_multi" min="0" max="9999" value="3" /></p>
+                    <p><label for="num_km">Distance parcourue :</label> <input type="number" name="num_km" id="num_km" min="0" max="9999" value="0" /></p>
+                    <h2 id="remuneration"></h2>
+                </fieldset>
+     */
+    calculerRemuneration();
+    assertTrue('Test main', 'La rémunération sera de : 1130 €' === window.document.querySelector("#remuneration").innerHTML);
+};
