@@ -73,7 +73,7 @@ function recupAnciennete(nb, fixe) {
     const nbSup = 10;
     const txSup = 0.06;
     if (nb >= nbSup) {
-        return (fixe * txSup);
+        return (fixe* txSup);
     }
     else if (nb >= nbMin) {
         return (fixe * txMin);

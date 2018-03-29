@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="fr-FR">
+    <head>
+        <title>Casques Nolark : Simulateur de calcul pour la force de vente !</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="José GIL" />
+        <meta name="description" content="Découvrez des casques moto dépassant même les exigences des tests de sécurité. Tous les casques Nolark au meilleur prix et avec en prime la livraison gratuite !" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <script src="../js/alcoolemie.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a id="rose2" href="../index.html">Accueil</a></li>
+                    <li><a id="mauve"href="route.html">Route</a></li>
+                    <li><a id="vert2" href="cross.html">Cross</a></li>
+                    <li><a id="violine" href="piste.html">Piste</a></li>
+                    <li><a id="bleu" href="enfants.html">Enfants</a></li>
+                    <li><a id="vert1" href="team.html">La Team</a></li>
+                    <li><a id="rose" href="nous-contacter.html">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="vide"></div>
+        <section id="formulaire">
+            <h1>Simulateur d'alcoolémie:</h1>
+            <form id="form_simulateur" name="form_simulateur">
+                
+                <p><label>Poids:</label><input type="number" id="num_poids" value="100"></p>
+                <fieldset id="sexe">
+                    <legend>Sexe: </legend>
+                    <p><label>Homme</label><input type="radio" name="rd_sexe" id="rd_sexehomme" value="homme" checked="checked"></p>
+                    <p><label>Femme</label><input type="radio" name="rd_sexe" id="rd_sexefemme" value="femme"></p>
+                </fieldset>
+                <p><label>Nombres de Verres</label><input type="number" id="num_verre" value="1"></p>
+                <h3 id="alcoolemie"></h3>
+                <h3 id="amende"></h3>
+                <h3 id="sanction"></h3>
+
+                <p id="controles"><input type="button" name="sub_calculer" id="btn_calculer" value="Calculer votre rémunération" /> <input type="reset" name="rst_annuler" id="btn_annuler" value="Effacer les données" /></p>
+            </form>
+        </section>
+        <div id="vide"></div>
+        <footer><p>&copy;2018 Nolark - Créé par <a href="mailto:jgil@ac-nice.fr">José GIL</a><p></footer>
+    </body>
+</html>
