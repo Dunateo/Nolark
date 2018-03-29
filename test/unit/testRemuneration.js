@@ -44,11 +44,7 @@ MesTestsUnitaires.prototype.testsRecupValeur = function () {
     /*:DOC +=
 
      <input type="number" id="num_ancien"  value="50" />
-
-p
      */
-    
+   
     assertTrue('Test recup anc', 50 === recupValeur("#num_ancien"));
- 
-
 };
